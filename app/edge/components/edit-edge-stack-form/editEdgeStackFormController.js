@@ -1,3 +1,5 @@
+import { PortainerEndpointTypes } from '@/portainer/models/endpoint/models';
+
 export class EditEdgeStackFormController {
   /* @ngInject */
   constructor() {
@@ -22,11 +24,11 @@ export class EditEdgeStackFormController {
   }
 
   hasKubeEndpoint() {
-    return this.state.endpointTypes.includes(7);
+    return this.state.endpointTypes.includes(PortainerEndpointTypes.EdgeAgentOnKubernetesEnvironment);
   }
 
   hasDockerEndpoint() {
-    return this.state.endpointTypes.includes(4);
+    return this.state.endpointTypes.includes(PortainerEndpointTypes.EdgeAgentOnDockerEnvironment);
   }
 
   onChangeGroups(groups) {
