@@ -138,6 +138,7 @@ func (handler *Handler) edgeStackUpdate(w http.ResponseWriter, r *http.Request) 
 
 		stack.EntryPoint = ""
 		stack.ManifestPath = ""
+		stack.DeploymentType = payload.DeploymentType
 	}
 
 	stackFolder := strconv.Itoa(int(stack.ID))
